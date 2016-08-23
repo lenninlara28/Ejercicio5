@@ -150,18 +150,18 @@ public class Principal extends javax.swing.JFrame {
         descu4=((sueldo*5)/100);
         
         descuento1=String.valueOf(descu1);
-        txtdescuento1.setText("-"+descuento1);
+        txtdescuento1.setText("-"+"$"+descuento1);
         
         descuento2=String.valueOf(descu2);
-        txtdescuento2.setText("-"+descuento2);
+        txtdescuento2.setText("-"+"$"+descuento2);
         
         descuento3=String.valueOf(descu3);
-        txtDescuento3.setText("-"+descuento3);
+        txtDescuento3.setText("-"+"$"+descuento3);
         
         descuento4=String.valueOf(descu4);
-        txtDescuento4.setText("-"+descuento4);
+        txtDescuento4.setText("-"+"$"+descuento4);
         
-        double total=sueldo-(sueldo*(descu1+descu2+descu3+descu4)/100);
+        double total=sueldo-((sueldo*10.5)/100);
         montoT=String.valueOf(total);
         txtTotal.setText("$"+montoT);
      
