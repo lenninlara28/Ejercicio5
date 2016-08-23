@@ -5,6 +5,8 @@
  */
 package Interfaz;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author hp 14
@@ -55,6 +57,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Ingrese Su Sueldo ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, -1, -1));
+
+        txtSueldo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSueldoKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 50, 120, -1));
 
         cmbEjecutar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -127,6 +135,9 @@ public class Principal extends javax.swing.JFrame {
     private void cmbEjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEjecutarActionPerformed
         String descuento1,descuento2,descuento3,descuento4,montoT;
         int sueldo,descu1,descu2,descu4;
+        if (txtSueldo.getText().trim().isEmpty()){
+         JOptionPane.showMessageDialog(this,"Digite Su Sueldo ","error", JOptionPane.ERROR_MESSAGE);
+         txtSueldo.requestFocusInWindow();}
         sueldo=Integer.parseInt(txtSueldo.getText());
         descu1=(sueldo/100);
         descu2=((sueldo*4)/100);
@@ -154,6 +165,15 @@ public class Principal extends javax.swing.JFrame {
     private void txtDescuento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDescuento3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescuento3ActionPerformed
+
+    private void txtSueldoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSueldoKeyTyped
+        char c=evt.getKeyChar(); 
+             
+         
+          if(Character.isLetter(c)) { 
+              getToolkit().beep(); 
+              evt.consume();}
+    }//GEN-LAST:event_txtSueldoKeyTyped
 
     /**
      * @param args the command line arguments
