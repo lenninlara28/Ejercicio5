@@ -126,7 +126,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void cmbEjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbEjecutarActionPerformed
         String descuento1,descuento2,descuento3,descuento4,montoT;
-        int sueldo,descu1,descu2,descu4,Total;
+        int sueldo,descu1,descu2,descu4;
         sueldo=Integer.parseInt(txtSueldo.getText());
         descu1=(sueldo/100);
         descu2=((sueldo*4)/100);
@@ -145,7 +145,9 @@ public class Principal extends javax.swing.JFrame {
         descuento4=String.valueOf(descu4);
         txtDescuento4.setText("-"+descuento4);
         
-        
+        double total=sueldo-(sueldo*(descu1+descu2+descu3+descu4)/100);
+        montoT=String.valueOf(total);
+        txtTotal.setText("$"+montoT);
      
     }//GEN-LAST:event_cmbEjecutarActionPerformed
 
