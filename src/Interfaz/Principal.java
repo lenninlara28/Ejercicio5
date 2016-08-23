@@ -81,20 +81,29 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel6.setText("Descuento Por  Caja De Ahorro ");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        txtdescuento1.setEditable(false);
         jPanel1.add(txtdescuento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 120, -1));
+
+        txtDescuento4.setEditable(false);
         jPanel1.add(txtDescuento4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 120, -1));
 
+        txtDescuento3.setEditable(false);
         txtDescuento3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDescuento3ActionPerformed(evt);
             }
         });
         jPanel1.add(txtDescuento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 120, -1));
+
+        txtdescuento2.setEditable(false);
         jPanel1.add(txtdescuento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 120, -1));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel7.setText("Sueldo Total ");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+
+        txtTotal.setEditable(false);
         jPanel1.add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 100, -1));
 
         cmbNuevo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -124,6 +133,17 @@ public class Principal extends javax.swing.JFrame {
         double descu3=((sueldo*0.5)/100);
         descu4=((sueldo*5)/100);
         
+        descuento1=String.valueOf(descu1);
+        txtdescuento1.setText("-"+descuento1);
+        
+        descuento2=String.valueOf(descu2);
+        txtdescuento2.setText("-"+descuento2);
+        
+        descuento3=String.valueOf(descu3);
+        txtDescuento3.setText("-"+descuento3);
+        
+        descuento4=String.valueOf(descu4);
+        txtDescuento4.setText("-"+descuento4);
         
         
      
